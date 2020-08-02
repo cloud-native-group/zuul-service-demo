@@ -38,7 +38,7 @@ spec:
     nodePort: 32573
     port: 6060
     protocol: TCP
-    targetPort: 7070
+    targetPort: 6060
   selector:
     app: zuul-service
   type: NodePort
