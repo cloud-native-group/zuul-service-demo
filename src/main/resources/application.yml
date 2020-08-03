@@ -11,7 +11,8 @@ zuul:
     routes:
         rest-service:
             path: /rest/**
-            serviceId: rest-service
+#            serviceId: rest-service
+            url: http://rest-service:7070
 
     ratelimit:
         #    key-prefix: springcloud-book #按粒度拆分的临时变量key前缀
