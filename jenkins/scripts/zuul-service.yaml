@@ -67,4 +67,4 @@ spec:
       app: zuul-service
   namespaceSelector:
     matchNames:
-      - default
+      - cn202009
