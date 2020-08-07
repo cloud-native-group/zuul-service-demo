@@ -47,3 +47,24 @@ spec:
   selector:
     app: zuul-service
   type: NodePort
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    k8s-app: zuul-service
+  name: zuul-service
+  namespace: monitoring
+spec:
+  endpoints:
+    - interval: 30s
+      port: tcp
+      path: /actuator/prometheus
+      scheme: 'http'
+  selector:
+    matchLabels:
+      app: zuul-service
+  namespaceSelector:
+    matchNames:
+      - default
