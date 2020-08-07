@@ -12,6 +12,11 @@ spec:
       app: zuul-service
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/prot: "6060"
+        prometheus.io/scheme: http
+        prometheus.io/path: /actuator/prometheus
       labels:
         app: zuul-service
     spec:
