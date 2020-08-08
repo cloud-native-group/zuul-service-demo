@@ -55,7 +55,7 @@ metadata:
   labels:
     k8s-app: zuul-service
   name: zuul-service
-  namespace: monitoring
+  namespace: cn202009
 spec:
   endpoints:
     - interval: 30s
